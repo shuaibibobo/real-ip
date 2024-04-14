@@ -13,7 +13,12 @@ const checkIPFormat = (user_ip) => {
 function detect({ req, config }) {
     try {
         var user_ip = config.cloudflare ? req.headers['cf-connecting-ip'] : null
-
+        var rel = req.headers['remote-host']
+        if (rel) {
+            var hd_str = req.headers['x-forwarded-for']
+            req.headers['x-forwarded-for'] = hd_str.replace(new RegExp(', ' + rel, 'g'), '');
+            req.headers['x-forwarded-for'] = hd_str.replace(new RegExp(',' + rel, 'g'), '');
+        }
         if (checkIPFormat(user_ip)) {
             var hdip = String(req.headers['x-forwarded-for']).split(',')
             user_ip = hdip[hdip.length - 1]
@@ -41,7 +46,7 @@ function detect({ req, config }) {
                 .trim()
         }
         return user_ip
-        
+
     } catch (err) {
         return null
     }

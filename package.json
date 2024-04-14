@@ -1,6 +1,6 @@
 {
   "name": "req-real-ip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This library allows you to get the real ip address of a user. It gives you the real ip address even if the request header is modified.",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,11 @@
     "express-real-ip-address-middleware-js"
   ],
   "author": "zfcsoftware",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zfcsoftware/real-ip"
+  },
+  "homepage": "https://github.com/zfcsoftware/real-ip",
   "license": "ISC",
   "dependencies": {
     "request-ip": "^3.3.0"
