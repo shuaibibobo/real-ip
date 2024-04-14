@@ -1,0 +1,37 @@
+{
+  "name": "real-ip",
+  "version": "1.0.0",
+  "description": "This library allows you to get the real ip address of a user. It gives you the real ip address even if the request header is modified.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node test.js"
+  },
+  "keywords": [
+    "real",
+    "ip",
+    "address",
+    "request",
+    "header",
+    "modified",
+    "x-forwarded-for",
+    "x-real-ip",
+    "x-client-ip",
+    "x-proxy-user",
+    "x-cluster-client-ip",
+    "forwarded",
+    "user-ip",
+    "express-ip",
+    "express-real-ip",
+    "express-request-ip",
+    "express-real-ip-address",
+    "express-real-ip-address-middleware",
+    "express-real-ip-address-middleware-nodejs",
+    "express-real-ip-address-middleware-node",
+    "express-real-ip-address-middleware-js"
+  ],
+  "author": "zfcsoftware",
+  "license": "ISC",
+  "dependencies": {
+    "request-ip": "^3.3.0"
+  }
+}
