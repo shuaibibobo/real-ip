@@ -1,4 +1,4 @@
-# REAL IP
+# REQ REAL IP
 This library allows you to get the real ip address of a user. It gives you the real ip address even if the request header is modified.
 
 ## Usage
@@ -8,7 +8,7 @@ const app = require('express')();
 
 app.listen(3000, () => { console.log('Server is running') });
 
-const realip = require('real-ip')
+const realip = require('req-real-ip')
 
 app.use((req, res, next) => {
     res.json({
